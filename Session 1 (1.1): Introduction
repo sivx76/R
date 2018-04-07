@@ -40,7 +40,7 @@ print('------')
 print("Question 4")
 
 for (loop in 1:3)
-print(c(phonebook[loop], loop))
+print(c(phonebook[loop], loop)) #value and index, respectively
 
 
 
@@ -60,10 +60,13 @@ print('------')
 print("Question 6")
 
 numeric_vector = c(100:70)
-print(c("This is the value at the first index:", numeric_vector[1]))
-print(c("This is the last value in the index:", numeric_vector[31]))
 print("The index of the first position of the vector is position #1.")
+print(c("This is the value at the first index:", numeric_vector[1]))
+
+print('------')
+
 print("The index of the last position of the vector is position #31.")
+print(c("This is the last value in the index:", numeric_vector[31]))
 
 
 
@@ -95,7 +98,7 @@ deletion_vector1 = long_vector_test[-3]
 deletion_vector2 = deletion_vector1[-16]
 #print(deletion_vector2)
 deletion_vector3 = deletion_vector2[-10]
-print(deletion_vector3)
+print(c("This is the value at the 12th position:", deletion_vector3[12]))
 
 
 
