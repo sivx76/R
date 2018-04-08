@@ -119,7 +119,7 @@ print('------')
 ####### Question 10 starts below
 print("Question 10")
 
-# 10) Create a vector from 12 to 65. #DONE DONE DONE
+# 10) Create a vector from 12 to 65. 
 #Use a loop to cycle through the positions in the vector 
 #and use an if statement to see whether that position contains a value of 32. 
 #If it does, print the index of that position.
@@ -144,34 +144,30 @@ print('------')
 ####### Question 11 starts below
 print("Question 11")
 
-this_vector = 112:1107
-this_vector[409] = 0
+#Make a vector that increases from 112 to 1107. 
+#Pick one position towards the middle and replace the value in that position with a 0.
+#Now pretend that you forgot where the 0 is. 
+#Write a script to find the index of the position that has the 0. 
+#Print the index that your script finds.
 
-position_zero = which(this_vector == 0)
-print(position_zero)
+vector12 = 112:1107
+vector12[409] = 0 #print(this_vector[409]) does equal 0
 
+indexCounter = 1 #I will set this counter, begins at 1 and will increment
+foundZero = FALSE #initialize at NOT at index of 0
+
+for (number12 in vector12)
+{
+  if (number12 == 0)
+  {print(indexCounter) #Print the index when value == zero.
+    foundZer0 = TRUE}  #Caused logical change, because the index is 0 - will STOP the increment.
+  
+  
+  if(!foundZero) #If FALSE, keep incrementing until we find it.
+  {indexCounter = indexCounter + 1}
+}
 
 
 print('------')
 ####### Question 12 starts below
 print("Question 12")
-
-vector_q12 = 112:1107
-deleted = vector_q12[-409]
-
-for (index in 1:995)
-{
-  storage = deleted[index +1] - deleted[index]
-  if (storage == 2)
-  {
-    print(storage)
-  }
-}
-
-#{
- # storage = deleted[position +1] - deleted[position]
-  #  if (storage == 2)
-   # {print(storage)}
-#}
-
-#storage = deleted[2] - deleted[1]
