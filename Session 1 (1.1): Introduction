@@ -119,23 +119,25 @@ print('------')
 ####### Question 10 starts below
 print("Question 10")
 
+# 10) Create a vector from 12 to 65. #DONE DONE DONE
+#Use a loop to cycle through the positions in the vector 
+#and use an if statement to see whether that position contains a value of 32. 
+#If it does, print the index of that position.
+
+
 vector = 12:65
+index = 1:54
 #print(vector)
 
-for (index in 1:54)
-  {print(vector[index])}
-
-#position_32 = which(vector == 32)
-#print(position_32)
-
-
-#for (num in vector)
-#{
-#  if (num == 32) 
-#  {print(vector[num])}
-#  {print(num)}
-#}
-
+for (num320 in vector)
+  {
+    if (num320 == 32)
+      {
+      position = (index[num320])
+      shifted_position = position -11
+      print(c("Here is the index where the vector contains a value of 32:", shifted_position))
+            } #print out the index in vector (shoud be 21)
+  }
 
 
 print('------')
@@ -173,4 +175,3 @@ for (index in 1:995)
 #}
 
 #storage = deleted[2] - deleted[1]
-
