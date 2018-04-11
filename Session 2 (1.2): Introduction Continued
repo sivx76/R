@@ -1,4 +1,4 @@
-
+# Week 1 Friday Homework
 
 ######## Question 1 starts here ######
 #Find out whether a number is divisible by 3
@@ -38,9 +38,20 @@ for (n in new_num_set)
 #Store all even numbers from 1 to 100 in a vector and print them
 print("Question 3")
 
+vector100 = 1:100
+print(vector100)
 
+evenlist = 0 #this or c(0) did work
 
+for (n in vector100)
+{
+  if (n %%2 == 0)
+  {
+    evenlist = c(evenlist, n) #this did not work: n + evenlist
+  }
+}
 
+print(evenlist)
 
 
 ###### Question 4 starts here
@@ -54,7 +65,3 @@ print("Question 4")
 ###### Question 5 starts here
 #Store all prime numbers from 1 to 200 in a vector and print them
 print("Question 5")
-
-
-
-
