@@ -72,10 +72,11 @@ count_of_primes = 0
 for (integer in test_prime_list)
   {
   
-  for (div in divisior)
+  for (div in divisior) #probablly not the best approach
   {
     if (prime / 1 == prime && prime / prime == 1)
-    }#(1) Need to incorporate NOT and (2) See if && or & is the best approach
+    }#(1) Need to incorporate NOT; only these factors are present and (2) See if && or & is the best approach
+    #sore this successful property in cleaned_primes?
   cleaned_primes = c(cleaned_primes, integer)
 }
 
