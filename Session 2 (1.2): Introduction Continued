@@ -86,3 +86,20 @@ print(cleaned_primes)
 ###### Question 5 starts here
 #Store all prime numbers from 1 to 200 in a vector and print them
 print("Question 5")
+
+primes_upto_200 = 1:200
+print(primes_upto_200)
+
+sequence_primes = 0 
+
+for (num in primes_upto_200)
+{
+  ##if (n %%2 == 0) ##this would have to change based on result from question #4
+  {
+    sequence_primes = c(sequence_primes, num)
+}
+
+print(sequence_primes)
+
+
+
