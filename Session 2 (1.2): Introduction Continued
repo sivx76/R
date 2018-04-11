@@ -61,26 +61,31 @@ print("Question 4")
 #Note: a prime number is a positive integer greater than 1 
 #that is has no positive divisors other than 1 and itself.
 
-test_prime_list = c(1, 3, 4, 5, 6, 100, 2000)
-divisor = 1:2000
-cleaned_primes = 0
+test_prime = 7 #can later make a vector if needed with 7:11
+divisor = 1:10
 
-count_of_primes = 0
-#status_of_prime = FALSE #later I will need something to store logical values and modify it
+#count_of_primes = 0
+status_of_prime = FALSE
 
+division_operation = test_prime / divisor
+print(division_operation)
+print('--------------')
 
-for (integer in test_prime_list)
+for(result in division_operation)
   {
+    if(result == 1.0 || result == 7.0) ##this must change
+    {status_of_prime = TRUE
+    print(result) 
+    print(status_of_prime) 
+      }
+  }
+
   
-  for (div in divisior) #probablly not the best approach
-  {
-    if (prime / 1 == prime && prime / prime == 1)
-    }#(1) Need to incorporate NOT; only these factors are present and (2) See if && or & is the best approach
-    #sore this successful property in cleaned_primes?
-  cleaned_primes = c(cleaned_primes, integer)
-}
+#make the statument TRUE if it is prime
+#  cleaned_primes = c(cleaned_primes, integer)
+#  }
 
-print(cleaned_primes)
+#print(cleaned_primes)
 
 
 
