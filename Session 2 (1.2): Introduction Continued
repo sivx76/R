@@ -64,18 +64,19 @@ print("Question 4")
 test_prime_list = c(1, 3, 4, 5, 6, 100, 2000)
 divisor = 1:2000
 cleaned_primes = 0
-#status_of_prime = FALSE #later I will need something to store logical values and modify it
 
-for (div in divisor)
-  {
-  
-  }
+count_of_primes = 0
+#status_of_prime = FALSE #later I will need something to store logical values and modify it
 
 
 for (integer in test_prime_list)
   {
-  if (integer %%integer ==) #this will be what is modified
-  {cleaned_primes = c(cleaned_primes, integer)}
+  
+  for (div in divisior)
+  {
+    if (prime / 1 == prime && prime / prime == 1)
+    }#(1) Need to incorporate NOT and (2) See if && or & is the best approach
+  cleaned_primes = c(cleaned_primes, integer)
 }
 
 print(cleaned_primes)
@@ -85,7 +86,3 @@ print(cleaned_primes)
 ###### Question 5 starts here
 #Store all prime numbers from 1 to 200 in a vector and print them
 print("Question 5")
-
-
-
-
