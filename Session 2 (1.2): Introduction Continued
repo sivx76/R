@@ -103,9 +103,7 @@ for (num in primes_upto_200)
   ##if (n %%2 == 0) ##this would have to change based on result from question #4
   {
     sequence_primes = c(sequence_primes, num)
+  }
 }
 
 print(sequence_primes)
-
-
-
