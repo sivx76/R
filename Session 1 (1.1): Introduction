@@ -169,5 +169,30 @@ for (number12 in vector12)
 
 
 print('------')
-####### Question 12 starts below
+####### Question 12 starts below ####ERROR HERE THAT I HAVE PROBLEM GETTING TO WORK!
 print("Question 12")
+
+#Make a vector that looks like the vector above except that the 0 has been deleted
+#(so the vector only has length 995). Now write a script to find the missing number 
+#(the number that was originally replaced by the 0) and print it. 
+#Use the fact that the vector values increase in steps of 1 except where the 0 was removed. 
+#There the values increase by 2.
+
+vector_q12 = 112:1107
+deleted = vector_q12[-409]
+range12 = 1:995
+print(range12)
+
+indexCount = 1
+foundTwo = FALSE
+
+for (index in range12)
+{
+  storage = deleted[index +1] - deleted[index]
+  if (storage == 2)
+  {print(storage)
+  foundTwo = TRUE}
+
+  if(!foundTwo)
+  {indexCount = indexCount + 1}
+}
