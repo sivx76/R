@@ -1,1 +1,63 @@
 
+# Week 1 Friday Homework
+# Make sure you CHECK YOUR OUTPUTS before submitting.
+# Press "Source" to run the file as a whole and see all the outputs.
+
+######## Question 1 starts here ######
+#Find out whether a number is divisible by 3
+print("Question 1")
+
+# Write your program for Question 1 here.
+#1) Program to determine whether a number is divisible by 3. Then print the value of this variable.
+
+num_1to10 = 1:10 #I am using this to test.
+print('Here are the #s we are considering: 1 to 10.')
+print(num_1to10)
+
+print('We will print out the numbers that are divisible by 3.')
+for (n in num_1to10)
+  {if (n %%3 ==0)
+    {print(n)}
+  }
+
+
+######## Question 2 starts here ######
+#Find out whether a number divides another number evenly. Print this out.
+print('------')
+print("Question 2")
+
+new_num_set = 1:31
+print('For this example, we are testing the numbers 1 to 31.')
+
+for (n in new_num_set)
+  {if (n %%2 == 0)
+    {print(n)}
+
+  }
+
+
+
+####### Question 3 starts here ######
+#Store all even numbers from 1 to 100 in a vector and print them
+print("Question 3")
+
+
+
+
+
+
+###### Question 4 starts here
+#Determine whether a number is prime
+print("Question 4")
+
+
+
+
+
+###### Question 5 starts here
+#Store all prime numbers from 1 to 200 in a vector and print them
+print("Question 5")
+
+
+
+
