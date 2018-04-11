@@ -47,7 +47,7 @@ for (n in vector100)
 {
   if (n %%2 == 0)
   {
-    evenlist = c(evenlist, n) #this did not work: n + evenlist
+    evenlist = c(evenlist, n) #this did not work: n + evenlist (produced one sum)
   }
 }
 
@@ -58,10 +58,34 @@ print(evenlist)
 #Determine whether a number is prime
 print("Question 4")
 
+#Note: a prime number is a positive integer greater than 1 
+#that is has no positive divisors other than 1 and itself.
 
+test_prime_list = c(1, 3, 4, 5, 6, 100, 2000)
+divisor = 1:2000
+cleaned_primes = 0
+#status_of_prime = FALSE #later I will need something to store logical values and modify it
+
+for (div in divisor)
+  {
+  
+  }
+
+
+for (integer in test_prime_list)
+  {
+  if (integer %%integer ==) #this will be what is modified
+  {cleaned_primes = c(cleaned_primes, integer)}
+}
+
+print(cleaned_primes)
 
 
 
 ###### Question 5 starts here
 #Store all prime numbers from 1 to 200 in a vector and print them
 print("Question 5")
+
+
+
+
