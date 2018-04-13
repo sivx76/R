@@ -41,7 +41,7 @@ print("Question 3")
 vector100 = 1:100
 print(vector100)
 
-evenlist = 0 #this or c(0) did work
+evenlist = 0 #this or c(0) did also work
 
 for (n in vector100)
 {
@@ -61,49 +61,39 @@ print("Question 4")
 #Note: a prime number is a positive integer greater than 1 
 #that is has no positive divisors other than 1 and itself.
 
-test_prime = 7 #can later make a vector if needed with 7:11
-divisor = 1:10
+test_prime = 9 
+result = TRUE
 
-#count_of_primes = 0
-status_of_prime = FALSE
+lower_bound = 2
+upper_bound = test_prime - 1
+numbers_to_check = c(lower_bound:upper_bound)
+print(numbers_to_check)
 
-division_operation = test_prime / divisor
-print(division_operation)
-print('--------------')
-
-for(result in division_operation)
-  {
-    if(result == 1.0 || result == 7.0) ##this must change
-    {status_of_prime = TRUE
-    print(result) 
-    print(status_of_prime) 
-      }
-  }
-
+for (number in numbers_to_check)
+{
+  if (test_prime %% number == 0) 
+  {result = FALSE}
   
-#make the statument TRUE if it is prime
-#  cleaned_primes = c(cleaned_primes, integer)
-#  }
-
-#print(cleaned_primes)
-
+  print(result)
+}
 
 
 ###### Question 5 starts here
 #Store all prime numbers from 1 to 200 in a vector and print them
 print("Question 5")
 
-primes_upto_200 = 1:200
-print(primes_upto_200)
+test_prime = 1:200 
+result = 'NOT PRIME' #wizardry here is needed
 
-sequence_primes = 0 
+lower_bound = 2
+upper_bound = length(test_prime) - 1
+numbers_to_check = c(lower_bound:upper_bound)
+print(numbers_to_check)
 
-for (num in primes_upto_200)
+for (number in numbers_to_check) #issue here too, perhaps
 {
-  ##if (n %%2 == 0) ##this would have to change based on result from question #4
-  {
-    sequence_primes = c(sequence_primes, num)
-  }
+  if (test_prime %% number == 0) 
+  {result = 'PRIME'}
+  
+  print(result)
 }
-
-print(sequence_primes)
