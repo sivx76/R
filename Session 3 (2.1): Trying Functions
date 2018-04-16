@@ -1,14 +1,3 @@
-# Week 2 Homework
-# Make sure you test your HW file before you submit it.
-# Press "Source" to see all the outputs and check that they all make sense.
-# If there are any errors or anomalies that you can't fix,
-# write about them in your e-mail when you submit your assignment.
-
-# If you want to create and use any functions other than the ones named in the assignment,
-# write them here at the top of your file.
-
-
-
 ###### Problem 1 starts here
 print("Problem 1")
 # myLength() function
