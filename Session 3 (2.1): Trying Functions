@@ -85,9 +85,69 @@ myMin <- function(vector) ####ALSO FIND A WAY TO PRINT POSITION OF THE VECTOR###
   min = Inf # Needed to pre-define. highest possible value, should be replaced with any value in TestDataSet
   length_of_vector = length(vector)
   
+  
+  for (n in length_of_vector)
+  {
+    value = vector[n]
+    
+    if (value < min) #as we go through this vector, if value is lower than min, set value to the new minimum
+    {min = value}
+  }
+  return(min)
+}
+
+TestDataSet = c(55, 999, 10, 2, 3, 1) 
+
+
+# Test code for grading
+print(myMin(TestDataSet)) #should print 0 5
+
+######## Problem 5 starts here ########
+print("Problem 5")
+# declare your myMax() function here
+# make sure you call it "myMax"
+
+myMax <- function(vector) ####Issues with obtaining maximum -- still fetches minimum value.####
+{
+  max = 0 # Needed to pre-define. lowest possible value, should be replaced with any value in TestDataSet
+  length_of_vector = length(vector)
+  
+  
+  for (n in length_of_vector)
+  {
+    value = vector[n]
+    
+    if (value > max) #as we go through this vector, if value is lower than min, set value to the new minimum
+    {max = value}
+  }
+  return(max)
+}
+
+TestDataSet = c(55, 999, 10, 2, 3, 1)
+
+
+
+# Test code for grading
+print(myMax(TestDataSet)) #should print 900 6
+
+
+########## Problem 6 starts here ######
+print("Problem 6")
+# Declare your mySecondSmallest() function here
+
+
+
+# Test code
+print(mySecondSmallest(TestDataSet)) #should print 2.72 8
+
+
+######### Problem 7 starts here ######
+print("Problem 7")
+# Declare your functions here
 
 
 
 
-
-
+TestDataSet_withRepeats <- c(200, 3.5, 4.00567, 82, 0, 900, 3.14159, 2.72,0,0,2.72,4)
+print(myMin_withRepeats(TestDataSet_withRepeats)) #should print 0 5 9 10
+print(mySecondSmallest_withRepeats(TestDataSet_withRepeats)) #should print 2.72 8 11
