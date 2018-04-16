@@ -1,1 +1,93 @@
+# Week 2 Homework
+# Make sure you test your HW file before you submit it.
+# Press "Source" to see all the outputs and check that they all make sense.
+# If there are any errors or anomalies that you can't fix,
+# write about them in your e-mail when you submit your assignment.
+
+# If you want to create and use any functions other than the ones named in the assignment,
+# write them here at the top of your file.
+
+
+
+###### Problem 1 starts here
+print("Problem 1")
+# myLength() function
+
+myLength <- function(a)
+{
+  length(a)
+}
+
+test_vector1 = c(7, 8, 9, 10, 11, 12, 100)
+
+y1 = myLength(test_vector1)
+print(y1) #should return 7 for test_vector1, is what occurs.
+
+# Be sure to test it with vectors of known length!
+
+######## Problem 2 starts here ######
+print("Problem 2")
+
+# myMean() function
+
+myMean <- function(b)
+{
+  sum = 0
+  for (value in b)
+  {sum = sum + value}
+  average = sum / length(b)
+}
+
+test_vector2 = c(70, 80, 9, 10, 11, 12, 100)
+
+y2 = myMean(test_vector2)
+print(y2)
+
+######## Problem 3 starts here ######
+print("Problem 3")
+
+
+# The following is test code for me to test your myMean function.
+# You can comment it out while you're writing your code, but make sure you
+# leave it intact in your final submission.
+# This should output the correct mean of TestDataSet.
+TestDataSet <- c(200, 3.5, 4.00567, 82, 0, 900, 3.14159, 2.72)
+
+myVariance = function(vector)
+{
+  n = length(vector) 
+  mean = myMean(vector) 
+  index = 1:n
+  sum = 0
+  
+  for(position in index) #changed from index in vector
+  {
+    y = (vector[position] - mean)^2 #may need to iterate over this
+    sum = sum + y
+  }
+  
+  variance = (sum) / (n-1) #changed the square to up above, at y
+  return(variance)
+}
+
+# Test code for grading
+print(myVariance(TestDataSet)) #should print 96879.53
+
+
+
+######## Problem 4 starts here ########
+print("Problem 4")
+# declare your myMin() function here
+# make sure you call it "myMin"
+
+myMin <- function(vector) ####ALSO FIND A WAY TO PRINT POSITION OF THE VECTOR####
+{
+  min = Inf # Needed to pre-define. highest possible value, should be replaced with any value in TestDataSet
+  length_of_vector = length(vector)
+  
+
+
+
+
+
 
