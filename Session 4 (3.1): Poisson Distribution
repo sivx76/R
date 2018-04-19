@@ -1,5 +1,3 @@
-#
-
 print("---------------------------------------------")
 print("Activities 1-3")
 
@@ -16,3 +14,20 @@ for(ball in nBalls)
   if (ball == 1321)  #STOP after iterating through the for loop 1321 times
   {break}
 }
+
+print(nUrns)
+
+#v <- 1:7 |||| the purpose of this fancy set of print statements was to prove to us that R is applying the floor function to the decimal values we are obtaining from the random function
+#print(v[2.4])
+#print(v[2.8])
+#print(v[2.999])
+#print(v[3])
+#print(v[0.4])
+
+
+print("The scatter plot output for Activity #2 is plotted.")
+hist(nUrns, 93)   #plot this
+
+
+
+
