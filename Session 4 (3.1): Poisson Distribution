@@ -93,39 +93,35 @@ throwBallsIntoUrns <- function(nBalls, nUrns){ #return output of index of disper
     {break}
   } 
 
-  #print(nUrns_numeic) #Error before this - these are all zeroes
-  hist(nUrns_numeic, 30)
-  
-  myMean <- function(b) #this and the next function is to calculate the index of dispersion of the distribution
-  {
-    sum = 0
-    for (value in b)
-    {sum = sum + value}
-    average = sum / length(b)
-  }
-  
-  myVariance = function(vector)
-  {
-    n = length(vector) 
-    mean = myMean(vector) 
-    index = 1:n
-    sum = 0
-    
-    for(position in index) 
-    {
-      y = (vector[position] - mean)^2 
-      sum = sum + y
-    }
-    
-    variance = (sum) / (n-1) 
-    return(variance)
-  }  
-  
-  print("This is the variance of the data set:")
-  print(myVariance(nUrns_numeic))
+  #hist(nUrns_numeic, 30)
+
+  #print("This is the variance of the data set:")
+  y = var(nUrns_numeic)  ##TROUBLE MAKER: was || print(var(nUrns_numeic)) 
+  print(y)
+}
+#  The self-generated mean and vairance functions are unneeded, will use mean and var below | would also be faster | if this function is in R environment I do not need to declare every single time
+
+
+throwBallsIntoUrns(1000, 30) #this works and generates one value, the variance of the data
+storage_of_indexes_dispersion = numeric(1000)
+#print(storage_of_indexes_dispersion)
+iterations = 1000
+index = 1:iterations
+
+
+for (index in 1:iterations)
+{
+  storage_of_indexes_dispersion[index] = throwBallsIntoUrns(1000,30) #this set all the values in the numeric() to 66.98, when I set y = throwBallsIntoUrns(1000, 30) above and put y here
 }
 
-throwBallsIntoUrns(1000, 30)
+
+vector_storage = c(storage_of_indexes_dispersion) #this made the statement into a vector, instead of printing out 1000 statemenets individually
+print(vector_storage)
+hist(vector_storage, 20)
+
+
+
+
 
 # Question 5 asks you to think about the relationship between mean and variance.
 # Type your answers in the blank print statement below
