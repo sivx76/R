@@ -121,10 +121,44 @@ hist(vector_storage, 20)
 
 
 
-
-
 # Question 5 asks you to think about the relationship between mean and variance.
 # Type your answers in the blank print statement below
 print("---------------------------------------------")
 print('Answer to thought questions in #5')
 print(' If we use the same number of balls and same number of urns, we will not get the same index of dispersion. The mean and variance of the data keeps changing.')
+
+
+
+
+
+
+############## CoOkIe DaTa SiMuLaTiOn #############
+
+# Make sure to include any functions (throwBallsIntoUrns, etc) that you will use.
+# The line below reads in the data and stores it in the vector variable cookieData.
+# Once you run this line, the variable cookieData will be defined and should show
+# up in your environment pane.
+source("http://labs.biology.ucsd.edu/rifkin/courses/bieb143/spr18/cookieData.R") #added this to the environment
+
+# Declare your functions here.
+
+print(cookieData2018)
+
+#count number of elements in cookieData2018 to determine # of cookies
+count_cookies = length(cookieData2018)
+print(count_cookies) #value is 276
+
+#sum cookieData2018 to determine # of chips total
+count_cookie_chips = sum(cookieData2018)
+print(count_cookie_chips) #value is 6067
+
+
+# Here is a test dataset to make sure your indexOfDispersion function works:
+dataForTestOfIoD=c(5,1,5,6,7,3,45,7,3,4,7,8,5,5,7,35,7,3,2,34,6,7,7,34,4,4,6)
+# The index of dispersion should be:  14.06655
+
+# Now write code that will simulate the cookie data randomly,
+# generate many indices of dispersion,
+# and compare the index of dispersion of cookieData
+# to the distribution of those simulated indices.
+# Your code should print a p-value to the console.
