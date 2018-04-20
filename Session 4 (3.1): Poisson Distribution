@@ -146,16 +146,26 @@ print(cookieData2018)
 
 #count number of elements in cookieData2018 to determine # of cookies
 count_cookies = length(cookieData2018)
-print(count_cookies) #value is 276
+print(count_cookies) #value is 276 cookies present
 
 #sum cookieData2018 to determine # of chips total
 count_cookie_chips = sum(cookieData2018)
-print(count_cookie_chips) #value is 6067
+print(count_cookie_chips) #value is 6067 chocolate chips present
 
 
 # Here is a test dataset to make sure your indexOfDispersion function works:
 dataForTestOfIoD=c(5,1,5,6,7,3,45,7,3,4,7,8,5,5,7,35,7,3,2,34,6,7,7,34,4,4,6)
-# The index of dispersion should be:  14.06655
+
+count_length = length(dataForTestOfIoD)
+print(count_length) #27 values in this vector
+
+count_sum = sum(dataForTestOfIoD)
+print(count_sum) #267 is the sum
+
+throwBallsIntoUrns(267, 27) #Before: throwBallsIntoUrns(nBalls, nUrns) 
+
+
+# The index of dispersion should be:  14.06655 || the value I obtain is 15.333
 
 # Now write code that will simulate the cookie data randomly,
 # generate many indices of dispersion,
