@@ -111,5 +111,18 @@ throwBallsIntoUrns <- function(nBalls, nUrns){ #return output of index of disper
     index = 1:n
     sum = 0
     
+    for(position in index) 
+    {
+      y = (vector[position] - mean)^2 
+      sum = sum + y
+    }
+    
+    variance = (sum) / (n-1) 
+    return(variance)
+  }  
+  
+  print("This is the variance of the data set:")
+  print(myVariance(nUrns_numeic))
+}
 
-
+throwBallsIntoUrns(1000, 30)
