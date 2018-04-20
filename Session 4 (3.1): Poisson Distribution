@@ -152,6 +152,41 @@ print(count_cookies) #value is 276 cookies present
 count_cookie_chips = sum(cookieData2018)
 print(count_cookie_chips) #value is 6067 chocolate chips present
 
+throwBallsIntoUrns(count_cookie_chips, count_cookies) #Before: throwBallsIntoUrns(nBalls, nUrns) 
+#the value I obtain is 21.86 || THIS DOES NOT SEEM RIGHT
+
+##CHECK THIS WITH BROOKE: why does this vary so much from IOD of 
+#DID THIS DO 1000 SIMULATIONS? DO 1000 SIMULATIONS
+
+
+cookie_IODs = c() #let's assume we get here
+number_of_values_less_than_threshold = 0
+index = 1:length(cookie_IODs)
+
+for (run in cookie_IODs)
+{
+  if(cookie_IODs[index] < 0.65) #assuming 0.65 is the actual value
+    {number_of_values_less_than_threshold = number_of_values_less_than_threshold + 1}
+}
+
+proportion_less_threshold = number_of_values_less_than_threshold / 1000 #assuming we have 1000 IODs in vector
+p_value = proportion_less_threshold  #do not need to *100, I am assuming
+
+
+
+
+
+# Now write code that will simulate the cookie data randomly,
+# generate many indices of dispersion,
+# and compare the index of dispersion of cookieData
+# to the distribution of those simulated indices.
+# Your code should print a p-value to the console.
+
+
+#-------------------------
+#-------------------------
+#-------------------------
+#-------------------------
 
 # Here is a test dataset to make sure your indexOfDispersion function works:
 dataForTestOfIoD=c(5,1,5,6,7,3,45,7,3,4,7,8,5,5,7,35,7,3,2,34,6,7,7,34,4,4,6)
@@ -164,11 +199,5 @@ print(count_sum) #267 is the sum
 
 throwBallsIntoUrns(267, 27) #Before: throwBallsIntoUrns(nBalls, nUrns) 
 
+# The index of dispersion should be:  14.06655 || the value I obtain is 15.333 (notice how this oscillates)
 
-# The index of dispersion should be:  14.06655 || the value I obtain is 15.333
-
-# Now write code that will simulate the cookie data randomly,
-# generate many indices of dispersion,
-# and compare the index of dispersion of cookieData
-# to the distribution of those simulated indices.
-# Your code should print a p-value to the console.
