@@ -126,3 +126,9 @@ throwBallsIntoUrns <- function(nBalls, nUrns){ #return output of index of disper
 }
 
 throwBallsIntoUrns(1000, 30)
+
+# Question 5 asks you to think about the relationship between mean and variance.
+# Type your answers in the blank print statement below
+print("---------------------------------------------")
+print('Answer to thought questions in #5')
+print(' If we use the same number of balls and same number of urns, we will not get the same index of dispersion. The mean and variance of the data keeps changing.')
