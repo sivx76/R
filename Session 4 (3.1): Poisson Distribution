@@ -151,9 +151,17 @@ print(count_cookies) #value is 276 cookies present
 #sum cookieData2018 to determine # of chips total
 count_cookie_chips = sum(cookieData2018)
 print(count_cookie_chips) #value is 6067 chocolate chips present
+#---
 
-throwBallsIntoUrns(count_cookie_chips, count_cookies) #Before: throwBallsIntoUrns(nBalls, nUrns) 
-#the value I obtain is 21.86 || THIS DOES NOT SEEM RIGHT
+mean_cookies_IOD = count_cookie_chips / count_cookies
+print(mean_cookies_IOD) #we obtain 21.98 as the mean
+
+variance_cookies_IOD = myVariance(cookieData2018)
+print(variance_cookies_IOD) #we obtain 14.31 as the variance
+
+cookies_index_of_disperstion = variance_cookies_IOD / mean_cookies_IOD
+print(cookies_index_of_disperstion) #we obtain 0.65, SUCCESS!
+
 
 ##CHECK THIS WITH BROOKE: why does this vary so much from IOD of 
 #DID THIS DO 1000 SIMULATIONS? DO 1000 SIMULATIONS
@@ -198,14 +206,18 @@ print(count_length) #27 values in this vector
 count_sum = sum(dataForTestOfIoD)
 print(count_sum) #267 is the sum
 
-mean_test_of_IOD = count_sum / count_length #267 / 27 = 9.88
-print(mean_test_of_IOD)
+mean_test_of_IOD = count_sum / count_length 
+print(mean_test_of_IOD) #267 / 27 = 9.88
 
-variance_test_of_IOD =
+variance_test_of_IOD = myVariance(dataForTestOfIoD)
+print(variance_test_of_IOD) #We obtain 139.10 as the variance
+
+test_index_of_dispersion = variance_test_of_IOD / mean_test_of_IOD
+print(test_index_of_dispersion)
+# The index of dispersion should be:  14.06655 || THIS IS WHAT WE OBTAINED! SUCCESS!
 
 #Issue: do not use throwBallsInto Urns -- calculate IOD: variance of dataForTestOfIoD / mean
 #DO NOT use the formula from last week, which generates a random distribution
-
-#throwBallsIntoUrns(267, 27)
-# The index of dispersion should be:  14.06655 || the value I obtain is 15.333, 11.02, 10.25 (notice how this oscillates)
+#DO NOT DO THIS throwBallsIntoUrns(267, 27)
+# the value I obtained with this wrong function was 15.333, 11.02, 10.25 (notice how this oscillates)
 
