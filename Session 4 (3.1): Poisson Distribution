@@ -164,9 +164,7 @@ print(cookies_index_of_disperstion) #we obtain 0.65, SUCCESS!
 
 
 
-#DID THIS DO 1000 SIMULATIONS? DO 1000 SIMULATIONS
 
-#My first attempt at calculating the p-value
 cookie_IODs = runif(1000,0,1) #I know I want 1000 simulations, what should be max and min? || I will assume 0 will be the min and 1 will be the max.
 print(cookie_IODs)
 
@@ -182,9 +180,14 @@ print(number_of_values_less_than_threshold)
 
 proportion_less_threshold = number_of_values_less_than_threshold / 1000 #assuming we have 1000 IODs in vector
 p_value = proportion_less_threshold  #do not need to *100, I am assuming
-print(p-value)
+print("The p-value for this distribution is:")
+print(p_value)
 
+if (p_value < 0.05)
+  {print('The null hypothesis is rejected.')}
 
+if(p_value > 0.05) #I had issues getting the else statement to work
+  {print('The null hypothesis is not rejected.')} #If this occurs, cannot say there is not a random cookie distribution.
 
 # Now write code that will simulate the cookie data randomly,
 # generate many indices of dispersion,
