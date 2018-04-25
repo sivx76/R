@@ -167,20 +167,22 @@ print(cookies_index_of_disperstion) #we obtain 0.65, SUCCESS!
 #DID THIS DO 1000 SIMULATIONS? DO 1000 SIMULATIONS
 
 #My first attempt at calculating the p-value
-cookie_IODs = c() #let's assume we get here
+cookie_IODs = runif(1000,0,1) #I know I want 1000 simulations, what should be max and min? || I will assume 0 will be the min and 1 will be the max.
+print(cookie_IODs)
+
 number_of_values_less_than_threshold = 0
 index = 1:length(cookie_IODs)
 
 for (run in cookie_IODs)
 {
-  if(cookie_IODs[index] < 0.65) #assuming 0.65 is the actual value
+  if(run < 0.65) #assuming 0.65 is the actual value was cookie_IODs[index] instead of run
   {number_of_values_less_than_threshold = number_of_values_less_than_threshold + 1}
 }
+print(number_of_values_less_than_threshold)
 
 proportion_less_threshold = number_of_values_less_than_threshold / 1000 #assuming we have 1000 IODs in vector
 p_value = proportion_less_threshold  #do not need to *100, I am assuming
-
-
+print(p-value)
 
 
 
