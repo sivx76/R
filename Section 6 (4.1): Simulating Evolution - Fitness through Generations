@@ -1,3 +1,9 @@
+################# Population Genetics ##############
+
+#1) Set up a population of 1000 asexually reproducing, haploid individuals where
+#they have the wild-type allele or the mutant allele. 
+# 0 is the wild-type allele, 1 is the mutant allele.
+#So your population will be 999 0s and one 1.
 
 zeroes = numeric(999)
 population = c(zeroes, 1)
@@ -58,3 +64,7 @@ while ((q < 1) & (q > 0)) #Changed from | to &
   storage_q_allele_values = c(storage_q_allele_values, q)
   
 }
+
+print(storage_q_allele_values)
+
+plot(storage_q_allele_values, type = 'l')
