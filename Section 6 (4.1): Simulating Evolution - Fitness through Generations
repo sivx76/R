@@ -1,1 +1,4 @@
 
+zeroes = numeric(999)
+population = c(zeroes, 1)
+print(population)
