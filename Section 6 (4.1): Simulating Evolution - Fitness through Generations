@@ -1,4 +1,16 @@
+################# Population Genetics ##############
 
+# Your submission for this homework assignment should give
+# the outputs requested by numbers 6 and 7 in the handout.
+# Number 8 is a discussion question.
+# Answer it in your e-mail when you submit the assignment.
+
+# You may also include any of your "future explorations" code.
+
+# Please don't include ALL of your test code, side projects, etc.
+# in this file.
+# It will be easier for me to see that it works if it only outputs
+# what I am looking for.
 
 #1) Set up a population of 1000 asexually reproducing, haploid individuals where
 #they have the wild-type allele or the mutant allele. 
@@ -27,3 +39,13 @@ print(fitness)
 
 new_generation = sample(population, 1000, replace = TRUE, prob = fitness) #We set to TRUE so some may not be picked. If we allow selection with replacement, then all will be given the chance to reproduce regardless of fitness.
 print(new_generation)
+
+
+counter = 0
+for (run in new_generation)
+{
+  if (run == 1)
+  {counter = counter +1}
+}
+
+print(counter) #I received 1 occurence | 2 occurence
