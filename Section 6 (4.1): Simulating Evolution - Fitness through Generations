@@ -1,3 +1,10 @@
+
+
+#1) Set up a population of 1000 asexually reproducing, haploid individuals where
+#they have the wild-type allele or the mutant allele. 
+# 0 is the wild-type allele, 1 is the mutant allele.
+#So your population will be 999 0s and one 1.
+
 zeroes = numeric(999)
 population = c(zeroes, 1)
 print(population)
@@ -13,3 +20,10 @@ print(storing_fitness_of_zeroes)
 
 fitness = c(storing_fitness_of_zeroes , 1)
 print(fitness)
+
+
+#3) Use your population and your fitness vectors to generate the next generation. 
+#Use the sample() function.
+
+new_generation = sample(population, 1000, replace = TRUE, prob = fitness) #We set to TRUE so some may not be picked. If we allow selection with replacement, then all will be given the chance to reproduce regardless of fitness.
+print(new_generation)
