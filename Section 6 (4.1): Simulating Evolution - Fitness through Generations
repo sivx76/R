@@ -1,4 +1,15 @@
-
 zeroes = numeric(999)
 population = c(zeroes, 1)
 print(population)
+
+
+#2) The mutant has a selective advantage – it is more fit. 
+#So the fitness of the mutant is 1, while the fitness of the wild-type is 0.97. 
+#Set up a vector that contains the fitnesses for each individual. 
+#This vector should be linked to the population vector so the fitness at a position should also corresponding to the individual in the population.
+
+storing_fitness_of_zeroes = rep(c(0.97), times = 999) #used to repeat a vector
+print(storing_fitness_of_zeroes)
+
+fitness = c(storing_fitness_of_zeroes , 1)
+print(fitness)
