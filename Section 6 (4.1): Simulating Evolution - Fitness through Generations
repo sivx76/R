@@ -1,5 +1,17 @@
 ################# Population Genetics ##############
 
+# Your submission for this homework assignment should give
+# the outputs requested by numbers 6 and 7 in the handout.
+# Number 8 is a discussion question.
+# Answer it in your e-mail when you submit the assignment.
+
+# You may also include any of your "future explorations" code.
+
+# Please don't include ALL of your test code, side projects, etc.
+# in this file.
+# It will be easier for me to see that it works if it only outputs
+# what I am looking for.
+
 #1) Set up a population of 1000 asexually reproducing, haploid individuals where
 #they have the wild-type allele or the mutant allele. 
 # 0 is the wild-type allele, 1 is the mutant allele.
@@ -47,12 +59,14 @@ q_allele = counter / 1000
 print(q_allele) #A value equals 0.002
 
 q = q_allele #ERROR was not pre-defining this before
+new_gen = population
+
 while ((q < 1) & (q > 0)) #Changed from | to &
 {
   storage_q_allele_values = c(q_allele)
   
   
-  new_gen = sample(population, 1000, replace = TRUE, prob = fitness) #population would be the new_gen, must update the fitness
+  new_gen = sample(new_gen, 1000, replace = TRUE, prob = fitness) #population would be the new_gen, must update the fitness
   counter = 0 #set population to new_gen, initialize new_gen with population OR update population with new vector
   
   for (run in new_gen)
@@ -68,3 +82,118 @@ while ((q < 1) & (q > 0)) #Changed from | to &
 print(storage_q_allele_values)
 
 plot(storage_q_allele_values, type = 'l')
+
+  #store frequency of q_allele as the starting value
+  #sample again
+  #store to value storage vector of q_allele(s)
+  #if not at fixation or extinction, run again
+
+
+#Questions:
+#2) What is p and q? Proportion of 0s or 1s? -- Arbitrary defintiion, will represent mutant alleles or % of 1s
+#3) What would be a good starting value to feed into the while loop? -- Can feed anything that allows wild-type to run, might as well use proportion of mutant alleles
+#4) Can I just input p and not p and q in the function? -- Yes, can simplify this to one value
+
+
+
+
+
+######## Function declarations ###########
+
+# If you write any of your own functions for this project, define them here.
+
+repeated_simulations <- function(number_of_simulations)
+{
+  mutant_counter = 0 #|||| ADDED TO FUNCTION: represents number of ones
+  wild_counter = 0 #|||| ADDED TO FUNCTION: represents number of zeroes
+  storage_q_allele_values <- vector() #new edit
+  
+  for (simulation in 1:number_of_simulations) #changed from number_of_simulations to 1:number_of_simulations || main fix!
+  {
+  
+  zeroes = numeric(999) #not: number_of_simulations -1
+  population = c(zeroes, 1)
+  #print(population)
+  
+  storing_fitness_of_zeroes = rep(c(0.97), times = 999) #not: number_of_simulations -1
+  #print(storing_fitness_of_zeroes)
+  
+  fitness = c(storing_fitness_of_zeroes , 1)
+  #print(fitness)
+  
+  
+  new_generation = sample(population, 1000, replace = TRUE, prob = fitness) #not: number of simulations
+  #print(new_generation)
+  
+  counter = 0
+  for (run in new_generation)
+  {
+    if (run == 1)
+    {counter = counter +1}
+  }
+  #print(counter) #Counter or q_allele is the number or frequency of mutant alleles
+  
+  q_allele = counter / 1000 #not: number_of_simulations
+  #print(q_allele) 
+  
+  q = q_allele 
+  new_gen = population
+  
+  
+  while ((q < 1) & (q > 0)) 
+  {
+    storage_q_allele_values = c(storage_q_allele_values, q_allele)
+    
+    
+    new_gen = sample(new_gen, 1000, replace = TRUE, prob = fitness) 
+    counter = 0 
+    
+    for (run in new_gen)
+    {
+      if (run == 1)
+      {counter = counter +1}
+    }
+    q = counter / 1000 
+    
+    if (q == 0) #represent last value |||| ADDED TO FUNCTION
+    {wild_counter = wild_counter +1}
+    
+    if (q == 1) #represent last value |||| ADDED TO FUNCTION
+    {mutant_counter = mutant_counter +1}
+    
+    storage_q_allele_values = c(storage_q_allele_values, q)
+    
+    loop_q_values = (storage_q_allele_values)
+    } #inside while loop   
+  
+  } #inside for loop
+  
+  
+  print(storage_q_allele_values) #|||| ADDED THIS BLOCK OF TEXT TO FUNCTION
+  print(paste('This is the number of simulations in which wild_type allele (0) went to fixation:', wild_counter))
+  print(paste('This is the number of simulations in which mutant allele (1) went to fixation.', mutant_counter)) 
+  plot(storage_q_allele_values, type = 'l')
+}
+
+
+######### Number 6: Selection ###############
+
+# Number 6 should run your population simulation WITH SELECTION
+# 10,000 times, or at least 100,
+# and calculate the probability of fixation of the mutant allele.
+print("Number 6")
+
+repeated_simulations(80)
+
+#Issues:
+#1 Not printing out 30 times.
+#2 Number of fixation events do not add up to 30.
+#3 Not plotting 30 times.
+
+
+
+# Output the probability of fixation to the console.
+# You may also plot all of the curves on one graph, if you wish.
+
+
+
