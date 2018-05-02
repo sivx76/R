@@ -183,12 +183,11 @@ repeated_simulations <- function(number_of_simulations)
 # and calculate the probability of fixation of the mutant allele.
 print("Number 6")
 
-repeated_simulations(80)
+repeated_simulations(20)
 
-#Issues:
-#1 Not printing out 30 times.
-#2 Number of fixation events do not add up to 30.
-#3 Not plotting 30 times.
+
+print('Here is exporation #1! I plotted all 10,000 of my simulations')
+repeated_simulations(10000)
 
 
 
@@ -197,3 +196,24 @@ repeated_simulations(80)
 
 
 
+
+############# Number 7: No selection ##########
+
+# Number 7 should run the simulation many times with NO SELECTION.
+print("Number 7")
+
+
+
+# Output the probability of fixation to the console.
+
+
+
+
+
+
+
+############## Future Explorations ##############
+
+# Include anything you came up with, even if it's not finished.
+# Make sure it runs without errors, though.
+# (Just comment-out lines of code if you have to.)
